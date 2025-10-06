@@ -1,0 +1,15 @@
+diff --git a/data/dbus/yggd.conf.in b/data/dbus/yggd.conf.in
+index 26b2d46..695da5c 100644
+--- a/data/dbus/yggd.conf.in
++++ b/data/dbus/yggd.conf.in
+@@ -15,8 +15,8 @@
+     <allow send_destination="com.redhat.Yggdrasil1.Dispatcher1" />
+   </policy>
+ 
+-  <policy context="default">
+-    <!-- Anyone can send messages to the Yggdrasil1 destination. -->
++  <policy user="root">
++    <!-- Only root can send messages to the Yggdrasil1 destination. -->
+     <allow send_destination="com.redhat.Yggdrasil1" />
+   </policy>
+ </busconfig>
